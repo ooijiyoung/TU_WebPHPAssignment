@@ -1,0 +1,32 @@
+.devices{
+	width: 250px;
+	display: inline-block;
+}
+.devicename{
+	font-size: 20px;
+	text-align: center;
+}
+.deviceprice{
+	text-align: center;
+}
+.devicebuy{
+	text-align: center;
+}
+.buyBtn {
+	color: #333;
+	padding: 10px 30px;
+	margin: 5px 0px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 16px;
+	cursor: pointer;
+	border: 1px solid #666;
+	border-radius:5px;
+	display: inline-block;
+}
+.buyBtn:hover{
+	background-color: #CBCBCB;	
+	transition: background .25s ease-in-out;
+	-moz-transition: background .25s ease-in-out;
+	-webkit-transition: background .25s ease-in-out;
+}

@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+<head>
+<!---
+Ooi Ji Young
+Ng Yi Le
+
+Web Dev Diploma in IT Taylors
+
+Assignment
+
+-->
+<meta charset="utf-8">
+<title>Durian</title>
+<link rel="stylesheet"  href="script/style.css" type="text/css">
+<link rel="icon" type="image/png" href="icon/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="icon/favicon-16x16.png" sizes="16x16" />
+<script src="script/jquery.min.js"></script>
+<script type="text/javascript" src="script/jquery.nivo.slider.js"></script>
+<link rel="stylesheet" href="script/nivo/default.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="script/nivo-slider.css" type="text/css" media="screen" />
+</head>
+
+<body>
+<div id="header">
+<div id="nav">
+<ui>
+<li id="navLogoBtn"><a href="index.html"><img src="img/logoSmall.png" id="sitelogo" height="25px"> </a></li>
+
+<li class="dropdown"><a href="#">Discover</a>
+    <ul class="dropdown-content">
+        <li><a href="discover/phone.html">Phones</a></li>
+        <li><a href="discover/computer.html">Computers</a></li>
+    </ul >
+</li>
+<li><a href="store/index.html">Store</a></li>
+<li class="dropdown right"><a href="#">About</a>
+    <ul class="dropdown-content right-content">
+        <li><a href="about/about.html">About Us</a></li>
+        <li><a href="about/contact.html">Contact Us</a></li>
+    </ul >
+</li>
+<li class="dropdown right"><a href="#"><script src="script/member.js" onload="rootDirNavBar()"></script></a>
+    <ul class="dropdown-content right-content" id="loginContainer">
+            <script src="script/member.js" onload="rootDirDropMenu()"></script>
+    </ul >
+</li>
+</ui>
+</div><!-- end of nav-->
+</div><!-- end of header-->
+<div id="content">
+
+<div class="slider-wrapper theme-default">
+            <div id="slider" class="nivoSlider">
+                <img src="img/image1.jpg" data-transition="slideInLeft" />
+                <img src="img/image2.jpg" data-transition="slideInLeft" />
+                <img src="img/image3.jpg" data-transition="slideInLeft" />
+            </div>
+</div>
+
+<div id="IEerror">
+<center>
+It seems that you're using Internet Explorer.<br>
+This Browser Is Not Supported By This Website As Some Element May Not Display Properly.<br>
+Please download recommended browser below:<br>
+<a href="https://www.microsoft.com/en-us/windows/microsoft-edge">Microsoft Edge</a><br>
+<a href="https://www.google.com/chrome/">Google Chrome</a><br>
+<a href="https://www.mozilla.org/en-US/firefox/new/">Mozilla Firefox</a><br>
+<a href="http://www.opera.com/">Opera Browser</a><br>
+</center>
+</div>
+<script type="text/javascript">
+	if (navigator.userAgent.match(/Trident.*rv\:11\./)){
+	document.getElementById("IEerror").style.display = "inline";
+	console.log("Internet Explorer Detected!");
+	}
+	else{
+	console.log("Not Internet Explorer, Proceed As Usual");
+	}
+
+</script>
+<noscript><h1>Note: <br>Javascript are needed for this page to display properly. Please Enable Javascript.</h1> </noscript>
+<div class="promoContainer">
+    <div class="promo">
+    <img src="img/promo/img1.jpg" width="100%">
+    </div>
+    <div class="promo">
+    <img src="img/promo/img2.jpg" width="100%">
+    </div>
+    <div class="promo">
+     <img src="img/promo/img3.jpg" width="100%">
+    </div>
+    <div class="promo">
+    <img src="img/promo/img4.jpg" width="100%">
+    </div>
+</div> <!--- end of promo-->
+<br>
+<div id="footer">
+    <div id="footerwarp">
+        <div class="col"><h1>Shop and Learn</h1>
+        <a href="discover/phone.html">Phones</a><br>
+        <a href="discover/computer.html">Computers</a><br>
+        </div>
+		
+		<div class="col"><h1>Devices</h1>
+        <a href="discover/c4.html">Durian C4</a><br>
+        <a href="discover/dbook.html">DurianBook Air</a><br>
+        <a href="discover/durface.html">Durface</a><br>
+		<a href="discover/dphone.html">dPhone 4G</a><br>
+		<a href="discover/glaptop.html">Gaming Laptop</a><br>
+        </div>
+        <div class="col"><h1>Durian Store</h1>
+        Store<br>
+        Tracking<br>
+        </div>
+        <div class="col"><h1>Account</h1>
+        <a href="account/account.html">Manage Your Account</a>
+        </div>
+        <div class="col"><h1>About Durian</h1>
+        <a href="about/about.html">About Us</a><br>
+        <a href="about/contact.html">Contact Us</a>
+        </div>
+    </div>
+    <div id="footer_copyright">
+    ITS41303 Web Development
+    <hr>
+    Copyright © 2016 Ng Yi Le / Ooi Ji Young.
+    <ui>
+        <li><a href="legal/termsofuse.html">Terms of Use</a></li>
+        <li><a href="legal/privacypolicy.html">Privacy Policy</a></li>
+    </ui>
+    </div>
+</div>
+
+</div> <!-- end of content -->
+
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('#slider').nivoSlider();
+    });
+    </script>
+</body>
+</html>

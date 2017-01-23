@@ -1,0 +1,243 @@
+@charset "utf-8";
+/* CSS Document
+Copyright (C) Ooi Ji Young
+JYDesign Studios 2016
+ */
+@media (max-width: 800px){
+	/*Incase of small screen. does not focus on this section */
+	#nav{
+		width:100% !important;
+	}
+	#nav li a{
+		padding-left: 10px !important;
+		padding-right:10px !important;
+	}
+	.promo{
+		width: 49% !important;
+	}
+}
+@font-face{
+	font-family: 'Myriad Pro';
+	src: url("font/myriadpro-regular-webfont.woff2") format("woff2"), /* Modern Browsers */
+    url("font/myriadpro-regular-webfont.woff") format("woff"), /*W3C recommendations */
+	url("font/myriadpro-regular-webfont.ttf") format("truetype"); /* TTF Fallback for older browser */
+}
+@font-face{
+	font-family: 'Myriad Pro Light';
+	src: url("font/myriadpro-light-webfont.woff2") format("woff2"), /* Modern Browsers */
+    url("font/myriadpro-light-webfont.woff") format("woff"), /*W3C recommendations */
+	url("font/myriadpro-light-webfont.ttf") format("truetype"); /* TTF Fallback for older browser */
+}
+a:visited{
+  color:blue;
+}
+body{
+	min-width:780px;
+	font-family: 'Myriad Pro', 'Segoe UI';
+	margin:0px;
+	padding:0px;
+}
+#header{
+	position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9999;
+    display: block;
+    margin: 0;
+    width: 100%;
+    height: 48px;
+    background: #333;
+    font-size: 18px;
+}
+#nav{
+	font-family:'Myriad Pro Light', 'Segoe UI Light';
+	list-style:none;
+	margin:auto;
+	width:80%;
+}
+#nav li{
+	float:left;
+	list-style:none;
+}
+#nav li a, .dropbtn{
+	display:inline-block;
+	padding-left: 20px;
+	padding-right:20px;
+	color: #fff;
+	text-decoration:none;
+	height: 48px;
+	line-height: 48px;
+	text-align:center;
+	font-size:18px;
+	transition: background .25s ease-in-out;
+	-moz-transition: background .25s ease-in-out;
+	-webkit-transition: background .25s ease-in-out;
+}
+/* overwrite parent style */
+#navLogoBtn{
+	padding-left: 20px !important;
+	padding-right:20px !important;
+}
+#navLogoBtn a{
+	padding: 0 !important;
+}
+#navLogoBtn a:hover{
+	background-color: transparent !important;
+	opacity: .65;
+}
+#sitelogo{
+	vertical-align: middle;
+}
+#nav li a:hover{
+	background-color: #222;
+}
+/* dropdown item */
+.dropdown-content {
+    visibility:hidden;
+    opacity:0;
+    position: absolute;
+	min-width:150px;
+	margin:0 !important;
+	padding: 0 !important;
+    background-color: #333;
+	-webkit-transition:.4s ease;
+    -moz-transition:.4s ease;
+    -o-transition:.4s ease;
+    transition:.4s ease;
+}
+.dropdown-content li{
+	float:none !important;
+	padding-right: 0px !important;
+	-webkit-transition: height 0.5s !important;
+}
+.dropdown-content li a {
+    display: block !important;
+	text-align: left !important;
+	padding-left: 15px !important;
+}
+.dropdown:hover .dropdown-content {
+    visibility:visible;
+    opacity:1;
+}
+/* end of dropdown */
+.right{
+	position:relative;
+}
+.right-content{
+	right:0px;
+}
+.right-content li a{
+	text-align:right !important; /* the last css rule overwrite importn*/
+	height: auto !important;
+	line-height: auto !important;
+}
+#content{
+	margin-top:48px;
+}
+#warp{
+	width:80%;
+	margin:auto;
+}
+#IEerror{
+	display:none;
+	margin:auto;
+	font-family:'Myriad Pro';
+	font-size:18px;
+}
+.promoContainer{
+	text-align: center;
+}
+.promo{
+	display:inline-block;
+	width:24.5%;
+}
+#footer{
+	font-size:10px;
+	color:#666;
+	background-color:#f2f2f2;
+	margin: auto;
+	width:100%;
+	padding: auto;
+}
+#footerwarp{
+	padding-top:5px;
+	width:80%;
+	margin:auto;
+}
+#footer h1{
+	font-size:12px;
+	color:#000;
+	margin:0px;
+	font-weight: normal;
+}
+.col { 
+	float: left;
+	margin:0px;
+	padding: 0px;
+	width: 20%;
+}
+.col a{ 
+	color:#666;
+}
+.col a:hover{
+	text-decoration:none;
+}
+#footer_copyright{
+	clear:both;
+	width:80%;
+	margin:auto;
+	padding-top:30px;
+	padding-bottom:10px;
+}
+#footer_copyright hr{
+	border: 0;
+    height: 1px;
+    background: #CCC;
+}
+#footer_copyright li{
+	list-style:none;
+	display:inline;
+	border-right:1px solid #CCC;
+}
+#footer_copyright li a{
+	margin: 0px 10px;
+	color: #666;
+	text-align:center;
+}
+#footer_copyright li a:hover{
+	text-decoration:none;
+}
+.noLightFont{
+	font-family:'Myriad Pro';
+}
+.title{
+	font-size:36px;
+}
+.blogArticle{
+	border-radius:3px;
+	border: 1px solid #acacac;
+	padding:10px;
+	margin: 10px 0;
+}
+.blogArticle img{
+	margin: 0 auto;
+	text-align:center;
+	display: block;
+}
+.blogTitle{
+	font-size:30px;
+}
+.blogDate{
+	font-size:10px;
+}
+.dev_cat{
+	margin:0px;
+	padding:0px 20px;
+	max-width:100%;
+	padding-top:25px;
+	height: 200px;
+}
+.dev_cat_img_l{
+	float: right;
+}

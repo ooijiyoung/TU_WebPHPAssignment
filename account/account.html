@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+<head>
+<!---
+JYDesign - Ooi Ji Young
+
+Web Dev Diploma in IT Taylors
+
+Assignment
+
+-->
+<meta charset="utf-8">
+<title>My Account - Durian</title>
+<link rel="stylesheet"  href="../script/style.css" type="text/css">
+<link rel="stylesheet"  href="../script/acc_style.css" type="text/css">
+<link rel="icon" type="image/png" href="../icon/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="../icon/favicon-16x16.png" sizes="16x16" />
+<script src="../script/jquery.min.js"></script>
+<script src="../script/myAcc.js"></script>
+<script src="../script/pageResize.js"></script>
+</head>
+
+<body>
+<div id="header">
+<div id="nav">
+<li id="navLogoBtn"><a href="../index.html"><img src="../img/logoSmall.png" id="sitelogo" height="25px"> </a></li>
+<li class="dropdown"><a href="#">Discover</a>
+    <ul class="dropdown-content">
+        <li><a href="../discover/phone.html">Phones</a></li>
+        <li><a href="../discover/computer.html">Computers</a></li>
+    </ul >
+</li>
+<li><a href="../store/index.html">Store</a></li>
+<li class="dropdown right"><a href="#">About</a>
+    <ul class="dropdown-content right-content">
+        <li><a href="../about/about.html">About Us</a></li>
+        <li><a href="../about/contact.html">Contact Us</a></li>
+    </ul >
+</li>
+<li class="dropdown right"><a href="#"><script src="../script/member.js" onload="insideDirNavBar()"></script></a>
+    <ul class="dropdown-content right-content" id="loginContainer">
+            <script src="../script/member.js" onload="insideDirDropMenu()"></script>
+    </ul >
+</li>
+</div><!-- end of nav-->
+</div><!-- end of header-->
+<div id="content">
+<div id="warp">
+<h1>My Account </h1>
+<div id="myacc">
+    <div id="myacc_l">
+        Hi <span id="my_acc_usrName"></span>
+    </div>
+    <div id="myacc_r">
+        User ID: <span id="my_acc_usrID"></span>
+    </div>
+</div>
+<div id="welcome">
+    <h1>Welcome to JYTravel! </h1>
+             
+    Thanks for signing up with us!<br>
+    You've just made it easier to keep track of all your trip details<sup>1</sup> and shop for the best travel deals.<br><br>
+
+    <div id="diclaimer">
+    <sup>1</sup> Coming Soon. Feature not yet implemented.<br>
+
+    </div>
+</div>
+<br>
+Account Settings
+<br><br>
+Change your email
+<form id="chgEmail">
+	<label for="currentEmail">Your Current E-mail:</label>
+    <input type="email" id="currentEmail" disabled><br>
+    
+    <label for="userEmail">New E-mail Address:</label>
+    <input type="email" id="userEmail"><br>
+    <div id="userEmailEmpty" class="formErrorMsg">
+    <label></label>You can't leave this empty.<br><br>
+    </div>
+    <!-- do not remove empty label , for alignment -->
+    <label></label><button type="button" id="cmdSubmit" onClick="chgEmail()">Change</button>
+</form>
+<div id="respEmail"></div>
+Change your password
+<form id="chgPassword">
+	<label for="currentPwd">Current Password:</label>
+    <input type="password" id="currentPwd"><br>
+    <div id="userCurPwdEmpty" class="formErrorMsg">
+    <label></label>You can't leave this empty.<br><br>
+    </div>
+    <label for="newPwd">New Password:</label>
+    <input type="password" id="newPwd" onchange="rgstCnfmPwd()" onblur="rgstCnfmPwd()"><br>
+    <div id="userNewPwdEmpty" class="formErrorMsg">
+    <label></label>You can't leave this empty.<br><br>
+    </div>
+    <label for="cfmNewPwd">Re-enter new Password:</label>
+    <input type="password" id="cfmNewPwd" onchange="rgstCnfmPwd()" onblur="rgstCnfmPwd()"><br>
+    <div id="userCfmPwdEmpty" class="formErrorMsg">
+    <label></label>You can't leave this empty.<br><br>
+    </div>
+    <div id="pwdNotMatch" class="formErrorMsg">
+    <label></label>These passwords don't match. Try again?<br><br>
+    </div>
+    <!-- do not remove empty label , for alignment -->
+    <label></label><button type="button" id="cmdSubmit2" onClick="chgPassword()">Change</button>
+</form>
+<div id="respPassword"></div>
+</div><!--end of warp-->
+<div id="footer">
+    <div id="footerwarp">
+        <div class="col"><h1>Shop and Learn</h1>
+        <a href="../discover/phone.html">Phones</a><br>
+        <a href="discover/computer.html">Computers</a><br>
+        </div>
+		
+		<div class="col"><h1>Devices</h1>
+        <a href="../discover/c4.html">Durian C4</a><br>
+        <a href="../discover/dbook.html">DurianBook Air</a><br>
+        <a href="../discover/durface.html">Durface</a><br>
+		<a href="../discover/dphone.html">dPhone 4G</a><br>
+		<a href="../discover/glaptop.html">Gaming Laptop</a><br>
+        </div>
+        <div class="col"><h1>Durian Store</h1>
+        Store<br>
+        Tracking<br>
+        </div>
+        <div class="col"><h1>Account</h1>
+        <a href="../account/account.html">Manage Your Account</a>
+        </div>
+        <div class="col"><h1>About Durian</h1>
+        <a href="../about/about.html">About Us</a><br>
+        <a href="../about/contact.html">Contact Us</a>
+        </div>
+    </div>
+    <div id="footer_copyright">
+    ITS41303 Web Development
+    <hr>
+    Copyright © 2016 Ng Yi Le / Ooi Ji Young.
+    <ui>
+        <li><a href="../legal/termsofuse.html">Terms of Use</a></li>
+        <li><a href="../legal/privacypolicy.html">Privacy Policy</a></li>
+    </ui>
+    </div>
+</div>
+</div> <!-- end of content -->
+</body>
+</html>

@@ -1,0 +1,108 @@
+@charset "utf-8";
+/* CSS Document
+Copyright (C) Ooi Ji Young
+JYDesign Studios 2016
+ */
+@media (max-width: 1000px){
+	/*Incase of small screen. does not focus on this section */
+	.itinLoc{
+	height:400px !important;
+	}
+}
+
+h2{
+	font-weight:normal;
+	font-size:28px;
+	margin: 0px;
+ }
+	 
+.itinLoc{
+	background-size:cover;
+	height:600px;
+	margin-bottom:10px;
+}
+.locNameL{
+	background-color: rgba(255, 255, 255 , 0.8);
+	margin-left:50px;
+	height:100%;
+	width:25%;
+	text-align:center;
+	display: flex;
+ 	justify-content: center;
+  	flex-direction: column;
+}
+.locNameL h1{
+	font-weight:normal;
+}
+.locNameL img{
+	width:80%;
+	margin: 0 auto;
+}
+.locNameR{
+	background-color: rgba(255, 255, 255 , 0.8);
+	margin-right:50px;
+	float:right;
+	height:100%;
+	width:25%;
+	text-align:center;
+	display: flex;
+ 	justify-content: center;
+  	flex-direction: column;
+}
+.locNameR h1{
+	font-weight:normal;
+}
+.locNameR img{
+	width:80%;
+	margin: 0 auto;
+}
+.button a{
+	background-color: #0078d7;
+    color: #FFF;
+	font-size:20px;
+    text-decoration: none;
+    padding: 5px 10px;
+    display: inline;
+    transition: background-color .25s ease-in-out;
+    -moz-transition: background-color .25s ease-in-out;
+    -webkit-transition: background-color .25s ease-in-out;
+}
+.button a:hover {
+    background-color: #0060ac;
+}
+.places{
+	background-color: #f2f2f2;
+	position: relative;
+    overflow: hidden;
+	padding:1px;
+	padding-top: 3px;
+	margin-bottom: 5px;
+}
+.places h1{
+	margin:0px;
+	font-weight:normal;
+	font-size:1.5em;
+}
+.img{
+	float: left;
+	width:150px;
+	margin: 0px 5px;
+}
+#sin_mbs{
+	background-color:#fff;
+	border:1px solid #acacac;
+	border-radius:3px;
+	padding: 10px;
+	padding-bottom: 2px;
+	margin-bottom: 5px;
+}
+#sin_mbs_intro{
+	width:80%;
+	font-size:18px;
+	text-align:center;
+	margin:auto;
+}
+.img_center{
+	margin: 0px auto;
+	display:block;
+}
