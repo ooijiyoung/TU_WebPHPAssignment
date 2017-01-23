@@ -4,9 +4,11 @@ function sendForm() {
 	var usrMsg = document.getElementById("msg").value;
 	if( name1 != '' && useMail != '' && usrMsg !=''){
 		var elem = document.getElementById("cform");
-		elem.remove();
+		document.getElementById("cform").submit();
+		//deprecated. use PHP
+		/*elem.remove();
 		document.getElementById("respfrm").innerHTML ="<br>Dear " + name1 + ",<br>Thank You For Your Response. <br>We will reply you shortly." ;
-		makeFooterAtBottom();
+		makeFooterAtBottom();*/
 	}else{
 		contactChkName();
 		contactChkEmail();

@@ -10,7 +10,7 @@ Assignment
 
 -->
 <meta charset="utf-8">
-<title>Contact Us - JYTravel</title>
+<title>Contact Us - Durian</title>
 <link rel="stylesheet"  href="../script/style.css" type="text/css">
 <link rel="stylesheet"  href="../script/forms_style.css" type="text/css">
 <link rel="icon" type="image/png" href="../icon/favicon-32x32.png" sizes="32x32" />
@@ -49,7 +49,7 @@ Assignment
 <h1>Contact Us</h1>
 We would like to hear from you! <br><br>
 
-<form id="cform" method="post">
+<form action="feedback.php" id="cform" method="post">
 	<label for="fname">Name:</label>
     <input type="text" id="fname" name="name"/>
     <div id="nameEmpty" class="formErrorMsg">
@@ -57,16 +57,16 @@ We would like to hear from you! <br><br>
     </div>
 
     <label for="mail">E-mail:</label>
-    <input type="email" id="mail" />
+    <input type="email" id="mail" name="email"/>
     <div id="userEmailEmpty" class="formErrorMsg">
     You can't leave this empty.<br><br>
     </div>
 
     <label for="telno">Phone Number:</label>
-    <input type="tel" id="telno" placeholder="Optional" />
+    <input type="tel" id="telno" placeholder="Optional" name="telno"/>
 
     <label for="msg">Message:</label>
-    <textarea id="msg"></textarea>
+    <textarea id="msg" name="msg"></textarea>
 	<div id="msgEmpty" class="formErrorMsg">
     You can't leave this empty.<br><br>
     </div>
