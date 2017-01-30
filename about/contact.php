@@ -20,6 +20,7 @@ Assignment
 </head>
 
 <body>
+
 <div id="header">
 	<?php require '../global/header.php';?>
 </div><!-- end of header-->
@@ -27,33 +28,95 @@ Assignment
 <div id="warp">
 <h1>Contact Us</h1>
 We would like to hear from you! <br><br>
+<?php
+// define variables and set to empty values
+$nameErr = $emailErr = $telErr = $msgErr = $formError = "";
+$name = $email = $telno = $msg = "";
 
-<form action="feedback.php" id="cform" method="post">
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+	
+	if(empty($_POST["name"])){
+		$nameErr = "Please Enter name";
+	}else{
+		$name = sanitize($_POST["name"]);
+		if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
+		$nameErr = "Only letters and white space allowed"; 
+		}
+	}
+	
+	if(empty($_POST["email"])){
+		$emailErr = "Please enter email";
+	}else{
+		$email = sanitize($_POST["email"]);
+		//validation handled by HTML5
+	}
+	
+	if(empty($_POST["telno"])){
+		//optional field
+	}else{
+		$telno = sanitize($_POST["telno"]);
+		if (!preg_match("/^[0-9 ]*$/",$telno)) {
+		$telErr = "Only numbers allowed"; 
+		}		
+	}
+	
+	if (empty($_POST["msg"])) {
+		$msgErr = "Please enter a message";
+	} else {
+		$msg = sanitize($_POST["msg"]);
+	}
+	
+	if($nameErr == "" && $emailErr == "" && $telErr == "" && $msgErr == "" && $msgErr == ""){
+		echo("Dear, $name <br>");
+		echo("Thank you for your response<br>");
+		echo("We will reply you shortly at <i>$email</i>");
+		echo("<script>document.addEventListener('DOMContentLoaded', function(){
+		var elem = document.getElementById('cform');
+		elem.remove();});</script>");
+	}
+	else
+		$formError = "<center><span class='formErrorMsg'><br>Please check all fields before submitting!<br></span></center>";
+	
+	
+}
+
+function sanitize($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+?>
+
+<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" id="cform" method="post">
 	<label for="fname">Name:</label>
-    <input type="text" id="fname" name="name"/>
-    <div id="nameEmpty" class="formErrorMsg">
-    You can't leave this empty.<br><br>
+    <input type="text" id="fname" name="name" value="<?php echo $name;?>" /></input>
+    <div class="formErrorMsg">
+	<?php echo $nameErr;?>
     </div>
 
     <label for="mail">E-mail:</label>
-    <input type="email" id="mail" name="email"/>
-    <div id="userEmailEmpty" class="formErrorMsg">
-    You can't leave this empty.<br><br>
+    <input type="email" id="mail" name="email"  value="<?php echo $email;?>" /></input>
+    <div class="formErrorMsg">
+    <?php echo $emailErr;?>
     </div>
 
     <label for="telno">Phone Number:</label>
-    <input type="tel" id="telno" placeholder="Optional" name="telno"/>
-
-    <label for="msg">Message:</label>
-    <textarea id="msg" name="msg"></textarea>
-	<div id="msgEmpty" class="formErrorMsg">
-    You can't leave this empty.<br><br>
+    <input type="tel" id="telno" placeholder="Optional" name="telno" value="<?php echo $telno;?>" /></input>
+    <div class="formErrorMsg">
+    <?php echo $telErr;?>
     </div>
-
-    <button type="button" onClick="sendForm()">Send your message</button>
+	
+    <label for="msg">Message:</label>
+    <textarea id="msg" name="msg" value="<?php echo $msg;?>" ></textarea>
+	<div class="formErrorMsg">
+    <?php echo $msgErr;?>
+    </div>
+	<?php echo $formError;?>
+    <button type="submit" value="Send your message">Send your message</button>
 
 </form>
-<script src="../script/contactFrm.js"></script>
+
 <div id="respfrm"></div>
 
 <h1>Or Contact Us at</h1>

@@ -27,7 +27,7 @@ Assignment
 <div id="content">
 <div id="warp">
 <h1>Member Login</h1>
-  <form method="post">
+  <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
   <!-- remove name="" in input to prevent POST or GET data -->
     <label for="userID">Username</label>
     <input type="text" id="userID" name="userID"><br>
