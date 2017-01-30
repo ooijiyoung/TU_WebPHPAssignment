@@ -18,31 +18,9 @@ Assignment
 <script src="../script/jquery.min.js"></script>
 </head>
 
-<body onLoad="chkIsLoggedin()">
+<body>
 <div id="header">
-<div id="nav">
-<li id="navLogoBtn"><a href="../index.html"><img src="../img/logoSmall.png" id="sitelogo" height="25px"> </a></li>
-<li><a href="../whatsnew/index.html">What's New</a></li>
-<li class="dropdown"><a href="#">Discover</a>
-    <ul class="dropdown-content">
-        <li><a href="../discover/malaysia.html">Malaysia</a></li>
-        <li><a href="../discover/singapore.html">Singapore</a></li>
-        <li><a href="../discover/aust.html">Australia</a></li>
-    </ul >
-</li>
-<li><a href="../itineraries/index.html">Itineraries</a></li>
-<li class="dropdown right"><a href="#">About</a>
-    <ul class="dropdown-content right-content">
-        <li><a href="../about/about.html">About Us</a></li>
-        <li><a href="../about/contact.html">Contact Us</a></li>
-    </ul >
-</li>
-<li class="dropdown right"><a href="#"><script src="../script/member.js" onload="insideDirNavBar()"></script></a>
-    <ul class="dropdown-content right-content" id="loginContainer">
-            <script src="../script/member.js" onload="insideDirDropMenu()"></script>
-    </ul >
-</li>
-</div><!-- end of nav-->
+	<?php require '../global/header.php';?>
 </div><!-- end of header-->
 <div id="content">
 <div id="warp">
@@ -78,40 +56,7 @@ We may disclose your Personal Data to our operation team (JYNetworks) and staff 
 </p>
 </div>
 <div id="footer">
-    <div id="footerwarp">
-        <div class="col"><h1>Discover</h1>
-        <a href="../discover/malaysia.html">Malaysia</a><br>
-        <a href="../discover/singapore.html">Singapore</a><br>
-        <a href="../discover/aust.html">Australia</a><br>
-        </div>
-		
-		<div class="col"><h1>Itineraries</h1>
-        <a href="../itineraries/kul.html">Kuala Lumpur</a><br>
-        <a href="../itineraries/mel.html">Melbourne</a><br>
-        <a href="../itineraries/sin.html">Singapore</a><br>
-		<a href="../itineraries/pen.html">Penang</a><br>
-        </div>
-        <div class="col"><h1>JYGroup</h1>
-        JYDesign<br>
-        JYSolutions<br>
-        </div>
-        <div class="col"><h1>Account</h1>
-        <a href="../account/account.html">Manage Your Account</a>
-        </div>
-        <div class="col"><h1>About JYTravel</h1>
-        <a href="../about/about.html">About Us</a><br>
-        <a href="../about/contact.html">Contact Us</a>
-        </div>
-    </div>
-    <div id="footer_copyright">
-    ITS41003 Principles Of Web Development
-    <hr>
-    Copyright © 2016 JYDesign / Ooi Ji Young.
-    <ui>
-        <li><a href="termsofuse.html">Terms of Use</a></li>
-        <li><a href="privacypolicy.html">Privacy Policy</a></li>
-    </ui>
-    </div>
+	<?php require '../global/footer.php';?>
 </div>
 </div> <!-- end of content -->
 </body>

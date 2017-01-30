@@ -21,28 +21,7 @@ Assignment
 
 <body>
 <div id="header">
-<div id="nav">
-<li id="navLogoBtn"><a href="../index.html"><img src="../img/logoSmall.png" id="sitelogo" height="25px"> </a></li>
-
-<li class="dropdown"><a href="#">Discover</a>
-    <ul class="dropdown-content">
-        <li><a href="../discover/phone.html">Phones</a></li>
-        <li><a href="../discover/computer.html">Computers</a></li>
-    </ul >
-</li>
-<li><a href="../store/index.html">Store</a></li>
-<li class="dropdown right"><a href="#">About</a>
-    <ul class="dropdown-content right-content">
-        <li><a href="../about/about.html">About Us</a></li>
-        <li><a href="../about/contact.html">Contact Us</a></li>
-    </ul >
-</li>
-<li class="dropdown right"><a href="#"><script src="../script/member.js" onload="insideDirNavBar()"></script></a>
-    <ul class="dropdown-content right-content" id="loginContainer">
-            <script src="../script/member.js" onload="insideDirDropMenu()"></script>
-    </ul >
-</li>
-</div><!-- end of nav-->
+	<?php require '../global/header.php';?>
 </div><!-- end of header-->
 <div id="content">
 <div id="warp">
@@ -76,40 +55,7 @@ Email: <br>
 
 </div><!--- end of warp-->
 <div id="footer">
-    <div id="footerwarp">
-        <div class="col"><h1>Shop and Learn</h1>
-        <a href="../discover/phone.html">Phones</a><br>
-        <a href="discover/computer.html">Computers</a><br>
-        </div>
-		
-		<div class="col"><h1>Devices</h1>
-        <a href="../discover/c4.html">Durian C4</a><br>
-        <a href="../discover/dbook.html">DurianBook Air</a><br>
-        <a href="../discover/durface.html">Durface</a><br>
-		<a href="../discover/dphone.html">dPhone 4G</a><br>
-		<a href="../discover/glaptop.html">Gaming Laptop</a><br>
-        </div>
-        <div class="col"><h1>Durian Store</h1>
-        Store<br>
-        Tracking<br>
-        </div>
-        <div class="col"><h1>Account</h1>
-        <a href="../account/account.html">Manage Your Account</a>
-        </div>
-        <div class="col"><h1>About Durian</h1>
-        <a href="../about/about.html">About Us</a><br>
-        <a href="../about/contact.html">Contact Us</a>
-        </div>
-    </div>
-    <div id="footer_copyright">
-    ITS41303 Web Development
-    <hr>
-    Copyright © 2016 Ng Yi Le / Ooi Ji Young.
-    <ui>
-        <li><a href="../legal/termsofuse.html">Terms of Use</a></li>
-        <li><a href="../legal/privacypolicy.html">Privacy Policy</a></li>
-    </ui>
-    </div>
+	<?php require '../global/footer.php';?>
 </div>
 </div> <!-- end of content -->
 </body>

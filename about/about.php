@@ -21,28 +21,7 @@ Assignment
 
 <body>
 <div id="header">
-<div id="nav">
-<li id="navLogoBtn"><a href="../index.html"><img src="../img/logoSmall.png" id="sitelogo" height="25px"> </a></li>
-
-<li class="dropdown"><a href="#">Discover</a>
-    <ul class="dropdown-content">
-        <li><a href="../discover/phone.html">Phones</a></li>
-        <li><a href="../discover/computer.html">Computers</a></li>
-    </ul >
-</li>
-<li><a href="../store/index.html">Store</a></li>
-<li class="dropdown right"><a href="#">About</a>
-    <ul class="dropdown-content right-content">
-        <li><a href="../about/about.html">About Us</a></li>
-        <li><a href="../about/contact.html">Contact Us</a></li>
-    </ul >
-</li>
-<li class="dropdown right"><a href="#"><script src="../script/member.js" onload="insideDirNavBar()"></script></a>
-    <ul class="dropdown-content right-content" id="loginContainer">
-            <script src="../script/member.js" onload="insideDirDropMenu()"></script>
-    </ul >
-</li>
-</div><!-- end of nav-->
+<?php require '../global/header.php';?>
 </div><!-- end of header-->
 <div id="content">
 <div id="warp">
@@ -51,7 +30,25 @@ The purpose of this website is to show all of you all the amazing staff which cr
 Help center operating hour: 24/7
 We provide 1 year warranty for all our customers, so that if our customers have any issues about our product like the product don’t function well or spoilt within 1 year they can exchange their product with us for a new one. Screen repairer are free to all our customer at all times, we could handle any scratch or dirt on the screen as long as it is Durian’s product. Furthermore, if customers were having battery power issues like the power dried out faster than before. We would replace a new battery for you as well. On the other hand, customers have two ways to send their product towards us for repair. The first choice are request online collector online through email and we will send our worker to collect the product from your place but this could take up to 1 week. 2nd choice is make an appointment with us and come to meet us up at our company on time, we will repair immediately for you within 2 hours.
 	Lastly, we provide free shipping towards all the online purchaser of our product and no GST charges nor service charges as well. The prices we shown in our webpage is fixed and wouldn’t be any changes without any inform. Hope you enjoy shopping with us.
+<?php
+function absolute_include($file)
+         {
+         /*
+         $file is the file url relative to the root of your site.
+         Yourdomain.com/folder/file.inc would be passed as
+         "folder/file.inc"
+         */
 
+         $folder_depth = substr_count($_SERVER["PHP_SELF"] , "/");
+
+         if($folder_depth == false)
+            $folder_depth = 1;
+
+         return(str_repeat("../", $folder_depth - 1) . $file);
+         }
+
+		 echo absolute_include("test.html");
+?>
 <br><br>
 
 Disclaimer:<br>
@@ -70,41 +67,8 @@ Notwithstanding the provisions of sections 17 U.S.C. Â§ 106 and 17 U.S.C. Â§ 106
 
 </div><!--- end of warp-->
 <div id="footer">
-    <div id="footerwarp">
-        <div class="col"><h1>Shop and Learn</h1>
-        <a href="../discover/phone.html">Phones</a><br>
-        <a href="discover/computer.html">Computers</a><br>
-        </div>
-		
-		<div class="col"><h1>Devices</h1>
-        <a href="../discover/c4.html">Durian C4</a><br>
-        <a href="../discover/dbook.html">DurianBook Air</a><br>
-        <a href="../discover/durface.html">Durface</a><br>
-		<a href="../discover/dphone.html">dPhone 4G</a><br>
-		<a href="../discover/glaptop.html">Gaming Laptop</a><br>
-        </div>
-        <div class="col"><h1>Durian Store</h1>
-        Store<br>
-        Tracking<br>
-        </div>
-        <div class="col"><h1>Account</h1>
-        <a href="../account/account.html">Manage Your Account</a>
-        </div>
-        <div class="col"><h1>About Durian</h1>
-        <a href="../about/about.html">About Us</a><br>
-        <a href="../about/contact.html">Contact Us</a>
-        </div>
-    </div>
-    <div id="footer_copyright">
-    ITS41303 Web Development
-    <hr>
-    Copyright Â© 2016 Ng Yi Le / Ooi Ji Young.
-    <ui>
-        <li><a href="../legal/termsofuse.html">Terms of Use</a></li>
-        <li><a href="../legal/privacypolicy.html">Privacy Policy</a></li>
-    </ui>
-    </div>
-</div>
+	<?php require '../global/footer.php';?>
+</div> <!--end of footer -->
 </div> <!-- end of content -->
 </body>
 </html>
