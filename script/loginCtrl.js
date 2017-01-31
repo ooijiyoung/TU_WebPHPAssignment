@@ -143,9 +143,8 @@ function cmdRegister(){
 	var pwd2 = document.getElementById("userCfmPwd").value;
 	var email = document.getElementById("userEmail").value;
 	
-	if( name1 != '' && name2 != '' && usrID !='' && pwd1 == pwd2 && email !=''){
-		sessionStorage.jyUserName = usrID;
-		sessionStorage.jyEmail = email;
+	if( name1 != '' && name2 != '' && usrID !='' && pwd1 !='' && pwd1 == pwd2 && email !=''){
+
 		document.getElementById("regist_form").submit();
 	}
 	else{

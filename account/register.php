@@ -20,6 +20,11 @@ Assignment
 <script src="../script/pageResize.js"></script>
 </head>
 <body onLoad="chkIsRegistered()">
+<div id="header">
+	<?php require '../global/header.php';?>
+</div><!-- end of header-->
+<div id="content">
+<div id="warp">
 <?php
 	
 $nameErr = $userErr = $pwdErr = $emailErr = $telErr = $msgErr = $formError = "";
@@ -39,7 +44,7 @@ $fName = $lName = $userID = $userPwd = $email = "";
 		}
 		
 		$userID = sanitize($_POST["userID"]);
-		if (!preg_match("/^[a-zA-Z0-9_-]*$/",$userID)){
+		if (preg_match("/[^a-z_\-0-9]/i",$userID)){
 			/*
 			nvm...
 			if(preg_match("/^[ ]*$/",$userID)){
@@ -48,12 +53,14 @@ $fName = $lName = $userID = $userPwd = $email = "";
 				$userErr = "Your username must at least 3 characters long";
 			}
 			*/
-			$userErr = "Your username must not contains space"; 
+			$userErr = "Your username must not contains space and illegal characters"; 
+		}else if(strlen($userID)<3){
+			$userErr = "Your username must at least 3 characters long";
 		}
 		
 		$userPwd = sanitize($_POST["userPwd"]);
-		if (preg_match("/^[ ]*$/",$userPwd)){
-			$pwdErr = "No space allowed";
+		if (preg_match("/\\s/",$userPwd)){
+			$pwdErr = "Your password must not contains space";
 		}
 
 		$email = sanitize($_POST["userEmail"]);
@@ -64,10 +71,14 @@ $fName = $lName = $userID = $userPwd = $email = "";
 		
 		
 		if($nameErr == "" && $userErr == "" && $pwdErr == "" && $emailErr == ""){
-			echo("Dear, $lname <br>");
+			echo("Dear, $lName <br>");
 			echo("Thank you for your response<br>");
 			echo("We will reply you shortly at <i>$email</i>");
-			
+			//parse data to JS.
+			echo("<script>	var usrID = '$userID';
+	var email = '$email';
+	sessionStorage.jyUserName = usrID;
+	sessionStorage.jyEmail = email;</script>");
 		}
 		else
 			$formError = "<center><span class='phpError'><br>Please check all fields before submitting!<br></span></center>";
@@ -83,18 +94,13 @@ function sanitize($data) {
 	
 	
 ?>	
-<div id="header">
-	<?php require '../global/header.php';?>
-</div><!-- end of header-->
-<div id="content">
-<div id="warp">
 <h1>Member Registration</h1>
   <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" id="regist_form">
   <!-- remove name="" in input to prevent POST or GET data -->
   	<label>Name</label><br>
 	<!-- use both onchange and onblur.. cuz sometimes onblur does not work propley-->
-    <input class="half" type="text" id="firstName" placeholder="First" onchange="rgstChkName()" onblur="rgstChkName()" name="fName">
-    <input class="half" type="text" id="lastName"  placeholder="Last" style="float:right;" onchange="rgstChkLName()" onblur="rgstChkLName()" name="lName"><br>
+    <input class="half" type="text" id="firstName" placeholder="First" onchange="rgstChkName()" onblur="rgstChkName()" name="fName" value="<?php echo $fName;?>">
+    <input class="half" type="text" id="lastName"  placeholder="Last" style="float:right;" onchange="rgstChkLName()" onblur="rgstChkLName()" name="lName" value="<?php echo $lName;?>"><br>
     <div id="nameEmpty" class="formErrorMsg">
     You can't leave this empty.<br><br>
     </div>
@@ -102,8 +108,8 @@ function sanitize($data) {
     	<?php echo $nameErr; ?>
 	</div>
     <label for="userID">Choose Your Username</label>
-    <input type="text" id="userID" onchange="rgstChkID()" onblur="rgstChkID()"><br>
-    <div id="userIDempty" class="formErrorMsg" name="userID">
+    <input type="text" id="userID" onchange="rgstChkID()" onblur="rgstChkID()" value="<?php echo $userID;?>" name="userID"><br>
+    <div id="userIDempty" class="formErrorMsg">
     You can't leave this empty.<br><br>
     </div>
     <div class="phpError">
@@ -128,7 +134,7 @@ function sanitize($data) {
     These passwords don't match. Try again?<br><br>
     </div>
     <label for="userEmail">E-mail</label>
-    <input type="email" id="userEmail" onchange="rgstChkEmail()" onblur="rgstChkEmail()" name="userEmail"><br>
+    <input type="email" id="userEmail" onchange="rgstChkEmail()" onblur="rgstChkEmail()" name="userEmail" value="<?php echo $email;?>"><br>
     <div id="userEmailEmpty" class="formErrorMsg">
     You can't leave this empty.<br><br>
     </div>
