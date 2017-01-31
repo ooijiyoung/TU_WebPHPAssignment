@@ -72,10 +72,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		echo("We will reply you shortly at <i>$email</i>");
 		echo("<script>document.addEventListener('DOMContentLoaded', function(){
 		var elem = document.getElementById('cform');
-		elem.remove();});</script>");
+		elem.remove();makeFooterAtBottom();});</script>");
 	}
 	else
-		$formError = "<center><span class='formErrorMsg'><br>Please check all fields before submitting!<br></span></center>";
+		$formError = "<center><span class='phpError'><br>Please check all fields before submitting!<br></span></center>";
 	
 	
 }
@@ -91,25 +91,25 @@ function sanitize($data) {
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" id="cform" method="post">
 	<label for="fname">Name:</label>
     <input type="text" id="fname" name="name" value="<?php echo $name;?>" /></input>
-    <div class="formErrorMsg">
+    <div class="phpError">
 	<?php echo $nameErr;?>
     </div>
 
     <label for="mail">E-mail:</label>
     <input type="email" id="mail" name="email"  value="<?php echo $email;?>" /></input>
-    <div class="formErrorMsg">
+    <div class="phpError">
     <?php echo $emailErr;?>
     </div>
 
     <label for="telno">Phone Number:</label>
     <input type="tel" id="telno" placeholder="Optional" name="telno" value="<?php echo $telno;?>" /></input>
-    <div class="formErrorMsg">
+    <div class="phpError">
     <?php echo $telErr;?>
     </div>
 	
     <label for="msg">Message:</label>
     <textarea id="msg" name="msg" value="<?php echo $msg;?>" ></textarea>
-	<div class="formErrorMsg">
+	<div class="phpError">
     <?php echo $msgErr;?>
     </div>
 	<?php echo $formError;?>

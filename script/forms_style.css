@@ -61,4 +61,9 @@ button:hover {
 
 .formErrorMsg{
 	color:red;
+	display: none;
+}
+
+.phpError{
+	color:red;
 }

@@ -52,9 +52,9 @@ function cmdLogout(){
 
 function chkIsRegistered(){
 	var membername = sessionStorage.jyUserName;
-	if (membername != null){
+	/* if (membername != null){
 		document.getElementById("warp").innerHTML ="<h1>Hi "+ membername +"</h1>You are already registered, no need to register again.";
-	}
+	} */
 }
 
 function rgstChkName(){
@@ -65,6 +65,16 @@ function rgstChkName(){
 	}else{
 		document.getElementById("firstName").className = document.getElementById("firstName").className.replace(" error", "");
 	}
+	if(name1 == '' || name2 == ''){
+		document.getElementById("nameEmpty").style.display = "inline";
+	}else{
+		document.getElementById("nameEmpty").style.display = "none";
+	}
+}
+
+function rgstChkLName(){
+	var name1 = document.getElementById("firstName").value;
+	var name2 = document.getElementById("lastName").value;
 	if(name2 == ''){
 		document.getElementById("lastName").className = document.getElementById("lastName").className + " error";
 	}else{
@@ -76,7 +86,6 @@ function rgstChkName(){
 		document.getElementById("nameEmpty").style.display = "none";
 	}
 }
-
 function rgstChkID(){
 	var usrID = document.getElementById("userID").value;
 	if(usrID == ''){
@@ -137,11 +146,11 @@ function cmdRegister(){
 	if( name1 != '' && name2 != '' && usrID !='' && pwd1 == pwd2 && email !=''){
 		sessionStorage.jyUserName = usrID;
 		sessionStorage.jyEmail = email;
-		sessionStorage.jyJustRegistered = 1;
-		window.location.href = "account.html";
+		document.getElementById("regist_form").submit();
 	}
 	else{
 		rgstChkName();
+		rgstChkLName();
 		rgstChkID();
 		rgstCnfmPwd();
 		rgstChkEmail();
