@@ -10,8 +10,7 @@ function cmdLogin() {
 		document.getElementById("errorMsg").innerHTML ="Error! Username or Password field cannot be empty";
 		}
 	else{
-		sessionStorage.jyUserName = usrname;
-		window.location.href = "account.html"; //send user to another page
+		document.getElementById("loginFrm").submit();
 		console.log("Login Success");
 	}
 }

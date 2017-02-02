@@ -3,7 +3,7 @@
 Copyright (C) Ooi Ji Young
 JYDesign Studios 2016
  */
-input, textarea {
+input, textarea, select, option {
 	font-family:'Myriad Pro', 'Segoe UI';
 	width: 100%;
 	font-size:16px;
