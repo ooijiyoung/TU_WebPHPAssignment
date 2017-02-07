@@ -24,6 +24,7 @@ function linkfile($file){
     </ul >
 </li>
 <li><a href="<?php linkfile("store/index.php");?>">Store</a></li>
+<li><a href="<?php linkfile("store/cart.php");?>">Cart</a></li>
 <li class="dropdown right"><a href="#">About</a>
     <ul class="dropdown-content right-content">
         <li><a href="<?php linkfile("about/about.php");?>">About Us</a></li>

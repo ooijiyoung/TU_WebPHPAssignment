@@ -33,35 +33,35 @@ Assignment
 	<div class="devicename">dPhone</div>
 	<div class="deviceprice">$1999</div>
 	<div class="devicebuy">
-	<a onclick="addCart(1);" href="javascript:void(0)" class="buyBtn">Buy</a></div>
+	<a id="btn1" onclick="addCart(1);" href="javascript:void(0)" class="buyBtn">Buy</a></div>
 </div>
 <div class="devices">
 	<img src="img/c4.png" width="100%">
 	<div class="devicename">Durian C4</div>
 	<div class="deviceprice">$1999</div>
 	<div class="devicebuy">
-	<a onclick="addCart(2);" href="javascript:void(0)" class="buyBtn">Buy</a></div>
+	<a id="btn2" onclick="addCart(2);" href="javascript:void(0)" class="buyBtn">Buy</a></div>
 </div>
 <div class="devices">
 	<img src="img/dBookPro.png" width="100%">
 	<div class="devicename">DurianBook Pro</div>
 	<div class="deviceprice">$1999</div>
 	<div class="devicebuy">
-	<a onclick="addCart(3);" href="javascript:void(0)" class="buyBtn">Buy</a></div>
+	<a id="btn3" onclick="addCart(3);" href="javascript:void(0)" class="buyBtn">Buy</a></div>
 </div>
 <div class="devices">
 	<img src="img/durface.png" width="100%">
 	<div class="devicename">Durface</div>
 	<div class="deviceprice">$1999</div>
 	<div class="devicebuy">
-	<a onclick="addCart(4);" href="javascript:void(0)" class="buyBtn">Buy</a></div>
+	<a id="btn4" onclick="addCart(4);" href="javascript:void(0)" class="buyBtn">Buy</a></div>
 </div>
 <div class="devices">
 	<img src="img/gaminglaptop.png" width="100%">
 	<div class="devicename">Gaming Laptop</div>
 	<div class="deviceprice">$1999</div>
 	<div class="devicebuy">
-	<a onclick="addCart(5);" href="javascript:void(0)" class="buyBtn">Buy</a></div>
+	<a id="btn5" onclick="addCart(5);" href="javascript:void(0)" class="buyBtn">Buy</a></div>
 </div>
 </div>
 <div id="footer">

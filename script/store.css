@@ -30,8 +30,21 @@
 	-moz-transition: background .25s ease-in-out;
 	-webkit-transition: background .25s ease-in-out;
 }
+#cartEmpty{
+	text-align: center;
+	font-size: 28px;
+}
+#cartShopping{
+	display:inline-block;
+	background-color:#0078d7;
+	color:#FFF;
+	margin-top:20px;
+	text-decoration:none;
+	padding:10px 20px;
+	font-size: 16px;
+}
 .crt_device{
-	display: block;
+	display: none;
 	border-radius:3px;
 	border: 1px solid #acacac;
 	padding:10px;
@@ -60,11 +73,23 @@
 	display: inline;
 	margin-left:20px;
 }
+.crt_dev_subt{
+	min-width: 100px;
+	display:inline-block !important;
+	margin-left:10px !important;
+	text-align: right;
+}
 .crt_num{
-	width: 30px;
+	width: 40px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
 	font-family:'Myriad Pro', 'Segoe UI';
 	font-size:16px;
+}
+.crt_item_remove{
+	cursor: pointer;
+	color: #0070c9;
+	float:right; 
+	font-size: 0.9em;
 }
