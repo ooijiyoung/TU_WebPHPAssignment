@@ -39,5 +39,32 @@
 	overflow: hidden;
 }
 
-.cart_dev_img{
+.crt_dev_img{
+	float:left;
+}
+.crt_prd_title{
+	display: inline;
+	float:left;
+}
+.crt_dev_title{
+	font-size: 33px;
+}
+.crt_dev_quant{
+	list-style:none;
+	display: inline;
+	float:right;
+}
+.crt_dev_quant li{
+	font-size:20px;
+	list-style:none;
+	display: inline;
+	margin-left:20px;
+}
+.crt_num{
+	width: 30px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+	font-family:'Myriad Pro', 'Segoe UI';
+	font-size:16px;
 }

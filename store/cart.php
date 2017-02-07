@@ -13,7 +13,9 @@ Assignment
 <title>Store - Durian</title>
 <link rel="stylesheet"  href="../script/style.css" type="text/css">
 <link rel="stylesheet"  href="../script/store.css" type="text/css">
+<!--
 <link rel="stylesheet"  href="../script/forms_style.css" type="text/css">
+-->
 <link rel="icon" type="image/png" href="../icon/favicon-32x32.png" sizes="32x32" />
 <link rel="icon" type="image/png" href="../icon/favicon-16x16.png" sizes="16x16" />
 <script src="../script/jquery.min.js"></script>
@@ -32,8 +34,20 @@ Assignment
 	</div>
 	<form action="checkout.php" method="post">
 		<div id="phone" class="crt_device">
-		<img class="cart_dev_img" src="img/dPhone.png">dPhone <br>
-		adadad<br>asdasd
+			<img width="150" class="crt_dev_img" src="img/dPhone.png">
+			<div class="crt_prd_title">
+				<span class="crt_dev_title">dPhone</span> <br>
+				Rethink what a phone can do.<br>
+			</div>
+			<br>
+			<ul class="crt_dev_quant">
+				<li>$1999</li>
+				<li><input class="crt_num" value="1" type="number" min="0" max="10"/></li>
+				<li>Total</li>
+			</ul>
+			<br>&nbsp;
+			<hr style="clear: right">
+		
 		</div>
 		<div id="c4" class="crt_device">
 		c4 
