@@ -1,0 +1,10 @@
+ <select name="location" id="location">
+  <option value="x">x</option>
+  <option value="y">y</option>
+ </select>
+
+<script type="text/javascript">
+  document.getElementById('location').value = "<?php echo $_GET['location'];?>";
+</script>
+
+to avoid too many if else

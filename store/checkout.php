@@ -143,35 +143,35 @@ Assignment
         <select name="state" id="state">
         	<option value="" disabled selected>Please select state</option>
 			<option value="Johor" 
-			<?php if ($_POST["state"] == "Johor") echo "selected='selected'"; ?>>Johor</option>
+			<?php if ($state == "Johor") echo "selected='selected'"; ?>>Johor</option>
 			<option value="Kedah"
-			<?php if ($_POST["state"] == "Kedah") echo "selected='selected'"; ?>>Kedah</option>
+			<?php if ($state == "Kedah") echo "selected='selected'"; ?>>Kedah</option>
 			<option value="Kelantan"
-			<?php if ($_POST["state"] == "Kelantan") echo "selected='selected'"; ?>>Kelantan</option>
+			<?php if ($state == "Kelantan") echo "selected='selected'"; ?>>Kelantan</option>
 			<option value="Kuala Lumpur"
-			<?php if ($_POST["state"] == "Kuala Lumpur") echo "selected='selected'"; ?>>Kuala Lumpur</option>
+			<?php if ($state == "Kuala Lumpur") echo "selected='selected'"; ?>>Kuala Lumpur</option>
 			<option value="Melaka"
-			<?php if ($_POST["state"] == "Melaka") echo "selected='selected'"; ?>>Melaka</option>
+			<?php if ($state == "Melaka") echo "selected='selected'"; ?>>Melaka</option>
 			<option value="Negeri Sembilan"
-			<?php if ($_POST["state"] == "Negeri Sembilan") echo "selected='selected'"; ?>>Negeri Sembilan</option>
+			<?php if ($state == "Negeri Sembilan") echo "selected='selected'"; ?>>Negeri Sembilan</option>
 			<option value="Pahang"
-			<?php if ($_POST["state"] == "Pahang") echo "selected='selected'"; ?>>Pahang</option>
+			<?php if ($state == "Pahang") echo "selected='selected'"; ?>>Pahang</option>
 			<option value="Perak"
-			<?php if ($_POST["state"] == "Perak") echo "selected='selected'"; ?>>Perak</option>
+			<?php if ($state == "Perak") echo "selected='selected'"; ?>>Perak</option>
 			<option value="Perlis"
-			<?php if ($_POST["state"] == "Perlis") echo "selected='selected'"; ?>>Perlis</option>
+			<?php if ($state == "Perlis") echo "selected='selected'"; ?>>Perlis</option>
 			<option value="Pulau Pinang"
-			<?php if ($_POST["state"] == "Pulau Pinang") echo "selected='selected'"; ?>>Pulau Pinang</option>
+			<?php if ($state == "Pulau Pinang") echo "selected='selected'"; ?>>Pulau Pinang</option>
 			<option value="Sabah"
-			<?php if ($_POST["state"] == "Sabah") echo "selected='selected'"; ?>>Sabah</option>
+			<?php if ($state == "Sabah") echo "selected='selected'"; ?>>Sabah</option>
 			<option value="Sarawak"
-			<?php if ($_POST["state"] == "Sarawak") echo "selected='selected'"; ?>>Sarawak</option>
+			<?php if ($state == "Sarawak") echo "selected='selected'"; ?>>Sarawak</option>
 			<option value="Selangor"
-			<?php if ($_POST["state"] == "Selangor") echo "selected='selected'"; ?>>Selangor</option>
+			<?php if ($state == "Selangor") echo "selected='selected'"; ?>>Selangor</option>
 			<option value="Terengganu"
-			<?php if ($_POST["state"] == "Terengganu") echo "selected='selected'"; ?>>Terengganu</option>
+			<?php if ($state == "Terengganu") echo "selected='selected'"; ?>>Terengganu</option>
 			<option value="Labuan"
-			<?php if ($_POST["state"] == "Labuan") echo "selected='selected'"; ?>>Labuan</option>
+			<?php if ($state == "Labuan") echo "selected='selected'"; ?>>Labuan</option>
 		</select>
     </div>
     <div id="stateEmpty" class="formErrorMsg">

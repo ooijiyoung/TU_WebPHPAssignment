@@ -27,8 +27,12 @@ Assignment
 <div id="content">
 <div id="warp">
 <h1>Store</h1>
-
-<form action="done.html" id="cardID"  method="post">
+<?php
+	if($_SERVER[])
+	
+?>
+	
+<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" id="cardID"  method="post">
     <div>
         <label for="cardhholder">*Name On Card:</label>
         <input required type="text" id="cardhholder" name="cardholdername"/>
@@ -43,7 +47,7 @@ Assignment
         <input required type="tel" id="expMM" maxlength="2" placeholder="MM" name="expMM"/>
         <input required type="tel" id="expYY" maxlength="2" placeholder="YY"  name="expYY"/>
 </div>
-<button>Continue</button>
+<button type="button" onClick="cmdPay();">Continue</button>
 </form>
 
 </div>
