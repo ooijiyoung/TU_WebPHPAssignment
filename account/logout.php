@@ -35,14 +35,6 @@ You will be redirect in <span id="countdown">3</span>
 </div>
 <div id="footer">
 	<?php require '../global/footer.php';?>
-    ITS41303 Web Development
-    <hr>
-    Copyright © 2016 Ng Yi Le / Ooi Ji Young.
-    <ui>
-        <li><a href="../legal/termsofuse.html">Terms of Use</a></li>
-        <li><a href="../legal/privacypolicy.html">Privacy Policy</a></li>
-    </ui>
-    </div>
 </div>
 </div> <!-- end of content -->
 <script>

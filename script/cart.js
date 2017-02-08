@@ -59,31 +59,33 @@ function checkCart(){
 		console.log ("have item");
 		document.getElementById("cartEmpty").style.display = "none";
 		document.getElementById("cartFrm").style.display = "block";
-	}
-	if(phone == "true"){
-		document.getElementById("phone").style.display = "block";
-		document.getElementById("phoneQuantity").value = 1;
-		makeFooterAtBottom();
-	}
-	if(c4 == "true"){
-		document.getElementById("c4").style.display = "block";
-		document.getElementById("noteQuantity").value = 1;
-		makeFooterAtBottom();
-	}
-	if(book == "true"){
-		document.getElementById("book").style.display = "block";
-		document.getElementById("macBookQuantity").value = 1;
-		makeFooterAtBottom();
-	}
-	if(surface == "true"){
-		document.getElementById("surface").style.display = "block";
-		document.getElementById("surfaceQuantity").value = 1;
-		makeFooterAtBottom();
-	}
-	if(laptop == "true"){
-		document.getElementById("laptop").style.display = "block";
-		document.getElementById("laptopQuantity").value = 1;
-		makeFooterAtBottom();
+	
+		if(phone == "true"){
+			document.getElementById("phone").style.display = "block";
+			document.getElementById("phoneQuantity").value = 1;
+			makeFooterAtBottom();
+		}
+		if(c4 == "true"){
+			document.getElementById("c4").style.display = "block";
+			document.getElementById("noteQuantity").value = 1;
+			makeFooterAtBottom();
+		}
+		if(book == "true"){
+			document.getElementById("book").style.display = "block";
+			document.getElementById("macBookQuantity").value = 1;
+			makeFooterAtBottom();
+		}
+		if(surface == "true"){
+			document.getElementById("surface").style.display = "block";
+			document.getElementById("surfaceQuantity").value = 1;
+			makeFooterAtBottom();
+		}
+		if(laptop == "true"){
+			document.getElementById("laptop").style.display = "block";
+			document.getElementById("laptopQuantity").value = 1;
+			makeFooterAtBottom();
+		}
+		getTotal();
 	}
 }
 
@@ -121,6 +123,7 @@ function removeCart(num){
 			break;	
 	}
 	updateVar();
+	getTotal();
 	if(phone == "false" && c4 == "false" && book == "false" && surface == "false" && laptop == "false"){
 		document.getElementById("cartEmpty").style.display = "block";
 		document.getElementById("cartFrm").style.display = "none";

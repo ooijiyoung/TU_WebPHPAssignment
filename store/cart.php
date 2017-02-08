@@ -126,7 +126,7 @@ Assignment
 			<hr style="clear: right">
 				<span class="crt_item_remove" onClick="removeCart(5);">Remove Item</span>
 		</div>
-		Total: $
+		Total: <span id="crt_amnt_total"></span><br>
 		<input type="submit" value="Continue">
 	</form>
 </div><!--end of warp-->
