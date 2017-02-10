@@ -71,14 +71,19 @@ $fName = $lName = $userID = $userPwd = $email = "";
 		
 		
 		if($nameErr == "" && $userErr == "" && $pwdErr == "" && $emailErr == ""){
-			echo("Dear, $lName <br>");
-			echo("Thank you for your response<br>");
-			echo("We will reply you shortly at <i>$email</i>");
+			$userData = fopen("../admin/user.txt", "a") or die("An Error Occurred, Please contact us!");
+			//hash password
+			$hashpwd = md5($userPwd);
+			$txt = "'$fName', '$lName', '$userID' , '$hashpwd', '$email'\n";
+			fwrite($userData, $txt);
+			fclose($userData);
 			//parse data to JS.
 			echo("<script>	var usrID = '$userID';
-	var email = '$email';
-	sessionStorage.jyUserName = usrID;
-	sessionStorage.jyEmail = email;</script>");
+			var email = '$email';
+			sessionStorage.jyUserName = usrID;
+			sessionStorage.jyEmail = email;
+			sessionStorage.jyJustRegistered = 1;</script>
+			<script>window.location.href = 'account.php';</script>");
 		}
 		else
 			$formError = "<center><span class='phpError'><br>Please check all fields before submitting!<br></span></center>";

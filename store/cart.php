@@ -35,7 +35,7 @@ Assignment
 		There are no items in this cart.<br>
 		<a href="<?php linkfile("store/index.php");?>" id="cartShopping">Continue Shopping</a>
 	</div>
-	<form id="cartFrm" action="getorder.php" method="post" style="display:none;" novalidate>
+	<form id="cartFrm" action="ordersummary.php" method="post" style="display:none;" novalidate>
 		<div id="phone" class="crt_device">
 			<img width="150" class="crt_dev_img" src="img/dPhone.png">
 			<div class="crt_prd_title">
@@ -119,16 +119,57 @@ Assignment
 			<ul class="crt_dev_quant">
 				<li>RM5,699.00</li>
 				<li><input id="laptopQuantity" name="laptopQuantity" class="crt_num" value="0" type="number" min="1" max="10"
-				onchange="calc(this,5699.00,laptopTotal);"/></li>
+				onchange="calc(this,5699.00,laptopTotal);"/>
+				</li>
 				<li class="crt_dev_subt" id="laptopTotal">RM5,699.00</li>
 			</ul>
 			
 			<hr style="clear: right">
 				<span class="crt_item_remove" onClick="removeCart(5);">Remove Item</span>
 		</div>
-		Total: <span id="crt_amnt_total"></span><br>
-		<input type="submit" value="Continue">
+		<div id="crt_total_amnt_container">
+			Total: <span id="crt_amnt_total"></span><br>
+			<button id="crt_checkout_btn" type="button" onClick="checkOut();">Checkout</button>
+		</div>
 	</form>
+<script type="text/javascript">
+	var t = false
+
+	$('input').focus(function () {
+		var $this = $(this)
+
+		t = setInterval(
+
+    function () {
+        if (($this.val() < 1 || $this.val() > 10) && $this.val().length != 0) {
+            if ($this.val() < 1) {
+                $this.val(1)
+            }
+
+            if ($this.val() > 10) {
+                $this.val(10)
+            }
+            $('#err_msg').fadeIn(1000, function () {
+                $(this).delay( 800 ).fadeOut(500)
+            })
+        }
+    }, 50)
+	})
+
+	$('input').blur(function () {
+		if (t != false) {
+			window.clearInterval(t)
+			t = false;
+		}
+	})
+</script>
+<div id="err_msg" class="overlay">
+	<div class="popup">
+		<div class="content">
+			Please enter a valid quantity between 1 and 10.
+		</div>
+	</div>
+</div>
 </div><!--end of warp-->
 <div id="footer">
 	<?php require '../global/footer.php';?>

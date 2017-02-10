@@ -26,9 +26,9 @@
 }
 .buyBtn:hover{
 	background-color: #CBCBCB;	
-	transition: background .25s ease-in-out;
-	-moz-transition: background .25s ease-in-out;
-	-webkit-transition: background .25s ease-in-out;
+	transition: background .50s ease-in-out;
+	-moz-transition: background .50s ease-in-out;
+	-webkit-transition: background .50s ease-in-out;
 }
 #cartEmpty{
 	text-align: center;
@@ -87,9 +87,80 @@
 	font-family:'Myriad Pro', 'Segoe UI';
 	font-size:16px;
 }
+
 .crt_item_remove{
 	cursor: pointer;
 	color: #0070c9;
 	float:right; 
 	font-size: 0.9em;
+}
+
+#crt_checkout_btn{
+	font-family:'Myriad Pro Light', 'Segoe UI Light';
+	font-size:18px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#crt_checkout_btn:hover {
+    background-color: #45a049;
+}
+
+#crt_total_amnt_container{
+	font-size: 24px;
+	text-align: right;
+}
+.overlay {
+ 	position: fixed;
+ 	top: 0;
+ 	bottom: 0;
+ 	left: 0;
+ 	right: 0;
+ 	background: rgba(0, 0, 0, 0.7);
+	display:none;
+	z-index: 10000; /* header +1 */
+}
+
+
+.popup {
+  margin: 250px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+table, td, th {    
+    border: 1px solid #ddd;
+	text-align: center;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td {
+    padding: 5px;
+}
+.sum_device{
+	display: none;
+}
+.sum_prod{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+.sum_dev_title{
+	font-size: 26px;	
 }

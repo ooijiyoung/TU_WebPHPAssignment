@@ -31,15 +31,12 @@ Assignment
     <div id="myacc_l">
         Hi <span id="my_acc_usrName"></span>
     </div>
-    <div id="myacc_r">
-        User ID: <span id="my_acc_usrID"></span>
-    </div>
 </div>
 <div id="welcome">
-    <h1>Welcome to JYTravel! </h1>
+    <h1>Registration Success! </h1>
              
     Thanks for signing up with us!<br>
-    You've just made it easier to keep track of all your trip details<sup>1</sup> and shop for the best travel deals.<br><br>
+    You've just made it easier to keep track of all your order details<sup>1</sup> and shop for the best deals.<br><br>
 
     <div id="diclaimer">
     <sup>1</sup> Coming Soon. Feature not yet implemented.<br>

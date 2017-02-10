@@ -9,7 +9,7 @@ function start() {
 	if(proceed == 1){
 		writeUsrName();
 		writeUsrMail();
-		writeUsrID();
+		//writeUsrID();
 		if(sessionStorage.jyJustRegistered == 1){
 			document.getElementById("welcome").style.display = "inline";
 			sessionStorage.jyJustRegistered = 0;

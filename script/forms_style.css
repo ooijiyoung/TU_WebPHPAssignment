@@ -67,3 +67,15 @@ button:hover {
 .phpError{
 	color:red;
 }
+
+#cardno{
+	display: inline;
+	width: 78.5%
+}
+
+#cvv{
+	display: inline;
+	width: 20%;
+	float: right;
+}
+

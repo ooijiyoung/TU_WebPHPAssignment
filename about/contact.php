@@ -73,6 +73,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		echo("<script>document.addEventListener('DOMContentLoaded', function(){
 		var elem = document.getElementById('cform');
 		elem.remove();makeFooterAtBottom();});</script>");
+		
+		$contactFile = fopen("../admin/feedback.txt", "a") or die("Unable to open file!");
+		$txt = "'$name', '$email', '$telno', '$msg'\n";
+		fwrite($contactFile, $txt);
+		fclose($contactFile);
 	}
 	else
 		$formError = "<center><span class='phpError'><br>Please check all fields before submitting!<br></span></center>";

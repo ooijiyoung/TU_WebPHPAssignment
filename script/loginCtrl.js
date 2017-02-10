@@ -41,7 +41,7 @@ function cmdLogout(){
 	var membername = sessionStorage.jyUserName;
 	if (membername==null){
 		alert("Logout Failed! You need to be logged in to log out. Please log in to log out");
-		window.location.href = "login.html";
+		window.location.href = "login.php";
 	}else{
 		sessionStorage.removeItem("jyUserName");
 		sessionStorage.removeItem("jyUserIDNo");

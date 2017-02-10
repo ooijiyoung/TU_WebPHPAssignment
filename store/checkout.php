@@ -66,7 +66,7 @@ Assignment
 		if (strlen($zipcode)!=5) {
 			$posErr = "Not a valid zipcode <script>posErr();</script>"; 
 		}
-		
+		$state = sanitize($_POST["state"]);
 	}
 
 	function sanitize($data) {
@@ -123,19 +123,24 @@ Assignment
     	<?php echo $addrErr; /*temporary not be using */?>
 	</div>
    
-    <div>
-        <label class="half" for="city">City:</label>
-        <label class="half" for="postcode" style="float:right;">Post code:</label>
-        <input class="half" type="text" id="city" name="city"  value="<?php echo $city;?>"/>
-        <input class="half" type="text" id="postcode" style="float:right;" name="zipcode"  value="<?php echo $zipcode;?>"/>
+    <div class="half" style="float:left;">
+        <label for="city">City:</label><br>
+        <input type="text" id="city" name="city"  value="<?php echo $city;?>"/>
     </div>
-    <div>
-    	<label id="cityEmpty" class="half formErrorMsg" >You can't leave this empty.</label>
-        <label id="posEmpty" class="half formErrorMsg" style="float:right;">You can't leave this empty.</label>
+    <div class="half" style="float:right;">
+        <label for="postcode">Post code:</label><br>
+        <input type="text" id="postcode" name="zipcode"  value="<?php echo $zipcode;?>"/>
+    </div>
+    <div class="half" style="float:left;">
+    	<label id="cityEmpty" class="formErrorMsg" >You can't leave this empty.</label>
+        
+    </div>
+    <div class="half" style="float:right;">
+        <label id="posEmpty" class="formErrorMsg">You can't leave this empty.</label>
     </div>
     <div class="phpError" style="clear: both;">
    		<label class="half" style="float:left;"><?php echo $cityErr;?></label>
-        <label class="half" style="float:right;"><?php echo $posErr; ?></label>
+        <label class="half" style="float:right;"><?php echo $posErr; ?></label><br>
 	</div>
    
     <div>

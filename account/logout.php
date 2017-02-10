@@ -10,7 +10,7 @@ Assignment
 
 -->
 <meta charset="utf-8">
-<meta http-equiv="Refresh" content="3; URL=../index.html">
+<meta http-equiv="Refresh" content="2; URL=../index.php">
 <title>Logout - JYTravel</title>
 <link rel="stylesheet"  href="../script/style.css" type="text/css">
 <link rel="stylesheet"  href="../script/forms_style.css" type="text/css">
@@ -31,14 +31,14 @@ Assignment
 
 You have successfully logged out from site. Thank you.<br><br>
 
-You will be redirect in <span id="countdown">3</span>
+You will be redirect in <span id="countdown">2</span>
 </div>
 <div id="footer">
 	<?php require '../global/footer.php';?>
 </div>
 </div> <!-- end of content -->
 <script>
-var time_left = 3;
+var time_left = 2;
 	var cinterval;
 	function time_dec(){
 		time_left--;

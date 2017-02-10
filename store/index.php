@@ -31,35 +31,35 @@ Assignment
 <div class="devices">
 	<img src="img/dPhone.png" width="100%">
 	<div class="devicename">dPhone</div>
-	<div class="deviceprice">$1999</div>
+	<div class="deviceprice">RM3,499.00</div>
 	<div class="devicebuy">
 	<a id="btn1" onclick="addCart(1);" href="javascript:void(0)" class="buyBtn">Buy</a></div>
 </div>
 <div class="devices">
 	<img src="img/c4.png" width="100%">
 	<div class="devicename">Durian C4</div>
-	<div class="deviceprice">$1999</div>
+	<div class="deviceprice">RM3,199.00</div>
 	<div class="devicebuy">
 	<a id="btn2" onclick="addCart(2);" href="javascript:void(0)" class="buyBtn">Buy</a></div>
 </div>
 <div class="devices">
 	<img src="img/dBookPro.png" width="100%">
 	<div class="devicename">DurianBook Pro</div>
-	<div class="deviceprice">$1999</div>
+	<div class="deviceprice">RM4,199.00</div>
 	<div class="devicebuy">
 	<a id="btn3" onclick="addCart(3);" href="javascript:void(0)" class="buyBtn">Buy</a></div>
 </div>
 <div class="devices">
 	<img src="img/durface.png" width="100%">
 	<div class="devicename">Durface</div>
-	<div class="deviceprice">$1999</div>
+	<div class="deviceprice">RM4,999.00</div>
 	<div class="devicebuy">
 	<a id="btn4" onclick="addCart(4);" href="javascript:void(0)" class="buyBtn">Buy</a></div>
 </div>
 <div class="devices">
 	<img src="img/gaminglaptop.png" width="100%">
 	<div class="devicename">Gaming Laptop</div>
-	<div class="deviceprice">$1999</div>
+	<div class="deviceprice">RM5,699.00</div>
 	<div class="devicebuy">
 	<a id="btn5" onclick="addCart(5);" href="javascript:void(0)" class="buyBtn">Buy</a></div>
 </div>

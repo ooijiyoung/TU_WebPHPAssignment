@@ -57,7 +57,9 @@ $userID = $userPwd = "";
 			echo("Login Success");
 			//parse data to JS.
 			echo("<script>	var usrID = '$userID';
-	sessionStorage.jyUserName = usrID;</script>");
+	sessionStorage.jyUserName = usrID;
+	window.location.href = '../index.php';
+	</script>");
 		}
 		else
 			$formError = "<center>Please check if you've filled all the fields </center>";

@@ -25,3 +25,48 @@ function getTotal(){
 	
 	document.getElementById("crt_amnt_total").innerHTML = "RM" + price;
 }
+
+function checkOut(){
+	var phNo = document.getElementById("phoneQuantity").value;
+	var noteNo = document.getElementById("noteQuantity").value;
+	var mbpNo = document.getElementById("macBookQuantity").value;
+	var spNo = document.getElementById("surfaceQuantity").value;
+	var nbNo = document.getElementById("laptopQuantity").value;
+	sessionStorage.jyCartPhone = phNo;
+	sessionStorage.jyCartNote = noteNo;
+	sessionStorage.jyCartMbp = mbpNo;
+	sessionStorage.jyCartSP = spNo;
+	sessionStorage.jyCartNB = nbNo;
+	document.getElementById("cartFrm").submit();
+}
+
+function loadSummaryPage(){
+	if(sessionStorage.jyCartPhone > 0){
+		document.getElementById("phone").style.display = "table-row";
+		makeFooterAtBottom();
+	}
+	if(sessionStorage.jyCartNote > 0){
+		document.getElementById("c4").style.display = "table-row";
+		makeFooterAtBottom();
+	}
+	if(sessionStorage.jyCartMbp > 0){
+		document.getElementById("book").style.display = "table-row";
+		makeFooterAtBottom();
+	}
+	if(sessionStorage.jyCartSP > 0){
+		document.getElementById("surface").style.display = "table-row";
+		makeFooterAtBottom();
+	}
+	if(sessionStorage.jyCartNB > 0){
+		document.getElementById("laptop").style.display = "table-row";
+		makeFooterAtBottom();
+	}
+}
+
+function debugSummary(){
+	console.log(sessionStorage.jyCartPhone);
+	console.log(sessionStorage.jyCartNote);
+	console.log(sessionStorage.jyCartMbp);
+	console.log(sessionStorage.jyCartSP);
+	console.log(sessionStorage.jyCartNB);
+}
