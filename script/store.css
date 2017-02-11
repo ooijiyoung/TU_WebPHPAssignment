@@ -164,3 +164,19 @@ th, td {
 .sum_dev_title{
 	font-size: 26px;	
 }
+
+#sum_cancel_btn{
+	font-family:'Myriad Pro Light', 'Segoe UI Light';
+	font-size:18px;
+    background-color: #DC3739;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#sum_cancel_btn:hover {
+    background-color: #AA1D1F;
+}

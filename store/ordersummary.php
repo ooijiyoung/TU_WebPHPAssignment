@@ -1,3 +1,6 @@
+<?php
+	session_start();
+?>
 <!doctype html>
 <html>
 <head>
@@ -46,6 +49,12 @@ Assignment
 		$surface = $_POST["surfaceQuantity"];
 		$laptop = $_POST["laptopQuantity"];
 		
+		$_SESSION["phone"] = $phone;
+		$_SESSION["note"] = $note;
+		$_SESSION["mbp"] = $mbp;
+		$_SESSION["surface"] = $surface;
+		$_SESSION["laptop"] = $laptop;
+		
 		$phSubT = ($phone * $phoneP);
 		$noteSubT = ($note * $noteP);
 		$mbpSubT = ($mbp * $nbP);
@@ -53,12 +62,12 @@ Assignment
 		$mbSubT = ($laptop * $nbP);
 		
 		$total = $phSubT + $noteSubT + $mbpSubT + $spSubT + $mbSubT;
+		$_SESSION["gTotal"] = $total;
 	}
 	
-	echo "iPhone: $phone <br> Note 7:$note <br> MacBook Air: $mbp <br> Surface: $surface <br> laptop: $laptop <br>total: $total";
+	#echo "iPhone: $phone <br> Note 7:$note <br> MacBook Air: $mbp <br> Surface: $surface <br> laptop: $laptop <br>total: $total";
 
 ?>
-<form name="buy">
 	<table>
 		<tr>
 			<th width="auto">Product</th>
@@ -137,7 +146,10 @@ Assignment
 		</tr>
 		
 	</table>
-	<br>
+	<div style="text-align: right">
+		<button id="sum_cancel_btn" type="button" onClick="cancelOrder();">Cancel My Order</button>
+		<button id="crt_checkout_btn" type="button" onClick="confirmOrder();">Confirm My Order</button>
+	</div>
 </div><!--end of warp-->
 <div id="footer">
 	<?php require '../global/footer.php';?>

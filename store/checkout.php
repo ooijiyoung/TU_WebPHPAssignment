@@ -1,3 +1,6 @@
+<?php
+	session_start();
+?>
 <!doctype html>
 <html>
 <head>
@@ -67,6 +70,18 @@ Assignment
 			$posErr = "Not a valid zipcode <script>posErr();</script>"; 
 		}
 		$state = sanitize($_POST["state"]);
+		if($nameErr == "" && $telErr == "" && $emailErr == "" && $addrErr == "" && $cityErr == "" && $posErr == "" && $stateErr == ""){
+			$_SESSION["fName"] = $fName;
+			$_SESSION["lName"] = $lName;
+			$_SESSION["telno"] = $telno;
+			$_SESSION["email"] = $email;
+			$_SESSION["addr"] = $addr;
+			$_SESSION["city"] = $city;
+			$_SESSION["zipcode"] = $zipcode;
+			$_SESSION["state"] = $state;
+			echo "<script>window.location.href = 'payment.php';</script>";
+		}
+		
 	}
 
 	function sanitize($data) {

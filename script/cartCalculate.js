@@ -63,6 +63,13 @@ function loadSummaryPage(){
 	}
 }
 
+function cancelOrder(){
+	window.location.replace("cart.php");
+}
+
+function confirmOrder(){
+	window.location.href = "checkout.php";
+}
 function debugSummary(){
 	console.log(sessionStorage.jyCartPhone);
 	console.log(sessionStorage.jyCartNote);

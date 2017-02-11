@@ -1,3 +1,6 @@
+<?php
+	session_start();
+?>
 <!doctype html>
 <html>
 <head>
@@ -27,7 +30,7 @@ Assignment
 </div><!-- end of header-->
 <div id="content">
 <div id="warp">
-<h1>Store</h1>
+<h1>Payment</h1>
 <?php
 $cardHolderErr = $numErr = $CCVErr = $expErr = $cardNoErr = $formErr = "";
 $cardholdername = $CardNum = $cardtype = $cardCVV = $expMM = $expYY = "";
@@ -83,14 +86,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	
 	//mcomplete payment
 	if($cardHolderErr == "" && $cardNoErr == "" && $expErr == ""){
-		echo "OK";
+		$_SESSION["cardHolder"] = $cardholdername;
+		$_SESSION["cardType"] = $cardtype;
+		$_SESSION["cardNum"] = $CardNum;
 	}
 	else{
 		$formErr = "<center>Please recheck card details! For security reasons, please input CVV again</center>";
-		echo "NOT OK";
 	}
 		
-			
+
 }
 
 function sanitize($data) {
@@ -183,6 +187,10 @@ function sanitize($data) {
 	</div>
 	<div class="phpError">
     	<?php echo $formErr; ?>
+	</div>
+	<div>
+		Grand Total: <?php echo "RM".number_format($_SESSION["gTotal"],2); ?><br>
+		By clicking continue, you agree to authorize Durian Computers to charge the payment amount indicated.
 	</div>
 <button type="button" onClick="cmdPay();">Continue</button>
 </form>
