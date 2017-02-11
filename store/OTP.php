@@ -61,7 +61,7 @@ Assignment
 		Amount : <?php echo "RM".number_format($_SESSION["gTotal"],2); ?>
 		Transaction Date:
 		OTP
-		
+		DO NOT ENTER REAL CARD DETAILS. THIS IS FOR ASSIGNEMNT PURPOSE
 	</p>
 </div>
 
