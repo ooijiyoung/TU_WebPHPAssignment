@@ -89,6 +89,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		$_SESSION["cardHolder"] = $cardholdername;
 		$_SESSION["cardType"] = $cardtype;
 		$_SESSION["cardNum"] = $CardNum;
+		echo "<script>window.location.href='paymentgateway.php'</script>";
 	}
 	else{
 		$formErr = "<center>Please recheck card details! For security reasons, please input CVV again</center>";
