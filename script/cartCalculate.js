@@ -77,3 +77,12 @@ function debugSummary(){
 	console.log(sessionStorage.jyCartSP);
 	console.log(sessionStorage.jyCartNB);
 }
+//Complete page remove localstorage
+function clearCart(){
+	localStorage.removeItem("jyCartdPhone");
+	localStorage.removeItem("jyCartC4");
+	localStorage.removeItem("jyCartdBook");
+	localStorage.removeItem("jyCartdurface");
+	localStorage.removeItem("jyCartglaptop");
+	console.log("order complete. removing cart item...");
+}

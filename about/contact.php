@@ -75,7 +75,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		elem.remove();makeFooterAtBottom();});</script>");
 		
 		$contactFile = fopen("../admin/feedback.txt", "a") or die("Unable to open file!");
-		$txt = "'$name', '$email', '$telno', '$msg'\n";
+		$txt = "$name|$email|$telno|$msg\n";
 		fwrite($contactFile, $txt);
 		fclose($contactFile);
 	}

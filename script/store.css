@@ -180,3 +180,10 @@ th, td {
 #sum_cancel_btn:hover {
     background-color: #AA1D1F;
 }
+.com_half{
+	display: inline-block;
+	width: 49.5%;
+}
+.com_right{
+	text-align: right;
+}

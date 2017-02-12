@@ -31,6 +31,7 @@ Assignment
 <div id="content">
 <div id="warp">
 <h1>Checkout</h1>
+Please enter delivery address.<br><br>
 <?php
 
 	#include

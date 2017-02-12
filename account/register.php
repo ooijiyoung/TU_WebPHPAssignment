@@ -74,7 +74,7 @@ $fName = $lName = $userID = $userPwd = $email = "";
 			$userData = fopen("../admin/user.txt", "a") or die("An Error Occurred, Please contact us!");
 			//hash password
 			$hashpwd = md5($userPwd);
-			$txt = "'$fName', '$lName', '$userID' , '$hashpwd', '$email'\n";
+			$txt = "$fName|$lName|$userID|$hashpwd|$email\n";
 			fwrite($userData, $txt);
 			fclose($userData);
 			//parse data to JS.
