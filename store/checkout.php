@@ -55,7 +55,9 @@ Assignment
 		if (!preg_match("/^[+0-9]*$/",$telno)){
 			$telErr = "Invalid phone number <script>telErr();</script>";
 		}
-		
+		if (strlen($telno)<10) {
+			$telErr = "Invalid phone number <script>telErr();</script>"; 
+		}
 		$email = sanitize($_POST["email"]);
 		if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 		  $emailErr = "Invalid email format <script>emailErr();</script>"; 
@@ -107,7 +109,7 @@ Assignment
    
     <div>
         <label for="telno">Mobile Phone:</label>
-        <input type="tel" id="telno" name="telno"  value="<?php echo $telno;?>"/>
+        <input type="tel" id="telno" name="telno"  value="<?php echo $telno;?>" maxlength="11"/>
     </div>
     <div id="telEmpty" class="formErrorMsg">
     	You can't leave this empty.
