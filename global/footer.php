@@ -5,11 +5,11 @@
         </div>
 		
 		<div class="col"><h1>Devices</h1>
-        <a href="<?php linkfile("discover/c4.php");?>">Durian C4</a><br>
-        <a href="<?php linkfile("discover/dbook.php");?>">DurianBook Air</a><br>
-        <a href="<?php linkfile("discover/durface.php");?>">Durface</a><br>
-		<a href="<?php linkfile("discover/dphone.php");?>">dPhone 4G</a><br>
-		<a href="<?php linkfile("discover/glaptop.php");?>">Gaming Laptop</a><br>
+        dPhone<br>
+        Durian C4<br>
+        DurianBook Pro<br>
+        Durface<br>
+        Gaming Laptop<br>
         </div>
         <div class="col"><h1>Durian Store</h1>
         Store<br>
