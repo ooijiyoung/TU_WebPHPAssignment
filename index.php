@@ -59,13 +59,13 @@ Please download recommended browser below:<br>
 <noscript><h1>Note: <br>Javascript are needed for this page to display properly. Please Enable Javascript.</h1> </noscript>
 <div class="promoContainer">
     <div class="promo">
-    <img src="img/promo/img1.jpg" width="100%">
+    <img src="img/promo/IMG1.jpg" width="100%">
     </div>
     <div class="promo">
-    <img src="img/promo/img2.jpg" width="100%">
+    <img src="img/promo/IMG2.jpg" width="100%">
     </div>
     <div class="promo">
-     <img src="img/promo/img3.jpg" width="100%">
+     <img src="img/promo/IMG3.jpg" width="100%">
     </div>
     <div class="promo">
     <img src="img/promo/img4.jpg" width="100%">

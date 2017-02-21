@@ -1,2 +1,0 @@
-Ji Young|Ooi|0127907822|ooijiyoung@gmail.com|60, Jalan USJ 11/4C|Subang Jaya|47620|Selangor|1|1|1|1|1|MasterCard|xxxx-xxxx-xxxx-2343|number_format(23095, 2)
-Ji Young|Ooi|0127907822|ooijiyoung@gmail.com|60, Jalan USJ 11/4C|Subang Jaya|47620|Selangor|1|1|1|1|1|MasterCard|xxxx-xxxx-xxxx-2343|23,095.00
